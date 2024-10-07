@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here are some recipes for you to try and make at home</h1>
+
+
+    <ul>
+    <%for(let i=0;i<recipes.length;i++){ %>
+        <li>
+        <div>
+        <h2><%=recipes[i].Dish_name%></h2>
+        <h3><small>Ingredients: <%=recipes[i].Ingredients%></small></h3>
+        <h3>Steps: <%=recipes[i].Steps%></h3>
+        </div>
+    </li>
+    </ul>
+    <%}%>
+    <a href = "/recipes/new">Add</a>
+</body>
+</html>
