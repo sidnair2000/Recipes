@@ -11,7 +11,7 @@ import bodyParser from "body-parser";
 
 
 
-const port = 3000;
+const port = process.env.PORT|| 3000;
 const api_url = "http://localhost:4000"
 const app = express();
 //   app.set('view engine', 'ejs');
