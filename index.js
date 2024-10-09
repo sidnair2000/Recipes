@@ -35,7 +35,7 @@ app.get("/recipes/new",(req,res)=>{
 
 app.post("/recipes/add",async(req,res)=>{
   try{
-    const response = await axios.post("http://localhost:4000/recipes/add",req.body)
+    const response = await axios.post("https://recipes-kbds.onrender.com/recipes/add",req.body)
     // console.log(response.data);
     res.redirect("/recipes")
   } catch(error){
