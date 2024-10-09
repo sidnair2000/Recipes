@@ -12,14 +12,15 @@ import bodyParser from "body-parser";
 
 
 const port = process.env.PORT|| 3000;
-const api_url = "http://localhost:4000"
+const api_url = "https://recipes-kbds.onrender.com"
 const app = express();
 //   app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 app.get("/recipes", async(req,res)=>{
-    const response = await axios.get("http://localhost:4000/recipes");
+    // const response = await axios.get("http://localhost:4000/recipes");
+    const response = await axios.get("https://recipes-kbds.onrender.com/recipes")
     console.log(response.data)
 
     res.render("index.ejs",{recipes:response.data})
