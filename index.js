@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 app.get("/recipes", async(req,res)=>{
-    // const response = await axios.get("http://localhost:4000/recipes");;;
+    // const response = await axios.get("http://localhost:4000/recipes")
     const response = await axios.get("https://recipes-kbds.onrender.com/recipes")
     console.log(response.data)
 
